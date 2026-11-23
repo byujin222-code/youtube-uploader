@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YouTube Auto Uploader</title>
+<style>
+  :root { --bg:#F3F4F8; --card:#fff; --text:#1D1F2A; --sub:#6B6F80; --accent:#6D5DF6; --line:#E4E6EE; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#14151B; --card:#21222B; --text:#ECEDF3; --sub:#9A9EB0; --accent:#8B7BFF; --line:#2D2F3A; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text);
+         font-family: "Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif; line-height:1.7; }
+  main { max-width:760px; margin:0 auto; padding:40px 16px 60px; }
+  .logo { display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px;
+          border-radius:14px; background:var(--accent); color:#fff; font-weight:700; }
+  h1 { margin:14px 0 4px; font-size:28px; }
+  .sub { color:var(--sub); margin:0 0 24px; }
+  section { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px 24px; margin:14px 0; }
+  h2 { margin:0 0 8px; font-size:19px; }
+  ul { padding-left:20px; margin:8px 0; }
+  a { color:var(--accent); }
+  .en { color:var(--sub); font-size:14px; }
+  footer { color:var(--sub); font-size:13px; margin-top:24px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="logo">▶</div>
+  <h1>YouTube Auto Uploader</h1>
+  <p class="sub">개인용 방송 다시보기 자동 업로드 프로그램 · Personal VOD auto-upload tool</p>
+
+  <section>
+    <h2>이 프로그램은요</h2>
+    <p>백유진이 자기 컴퓨터에서만 쓰는 개인용 프로그램이에요. OBS로 녹화한 방송 영상을 날짜 이름으로 정리하고,
+       본인 소유의 유튜브 채널에 <b>일부공개</b>로 올려요.</p>
+    <p class="en">This is a personal desktop tool used only by its owner. It renames OBS stream recordings by date
+       and uploads them as unlisted videos to the owner's own YouTube channel. It is not offered to other users.</p>
+  </section>
+
+  <section id="privacy">
+    <h2>개인정보처리방침 · Privacy Policy</h2>
+    <p>이 프로그램은 YouTube Data API를 통해 아래 권한만 사용해요.</p>
+    <ul>
+      <li><b>사용 권한</b>: <code>https://www.googleapis.com/auth/youtube</code> — 본인 채널에 영상 업로드, 올린 영상의 제목 수정, 채널 이름 확인</li>
+      <li><b>저장</b>: 구글 로그인 토큰은 사용자 본인 컴퓨터의 프로그램 폴더에만 저장돼요. 다른 서버로 보내지 않아요.</li>
+      <li><b>공유</b>: 어떤 데이터도 제3자에게 팔거나 공유하지 않아요. 광고나 분석에 쓰지 않아요.</li>
+      <li><b>삭제</b>: 프로그램 폴더의 <code>token.json</code>을 지우거나
+          <a href="https://myaccount.google.com/permissions">구글 계정의 앱 권한</a>에서 접근을 해제하면 바로 끊겨요.</li>
+    </ul>
+    <p class="en">The app uses the YouTube Data API scope <code>https://www.googleapis.com/auth/youtube</code> only to upload
+       videos to the owner's channel, edit the titles of those uploads, and read the channel name. OAuth tokens are stored
+       only on the owner's local computer and are never transmitted to any other server. No data is sold, shared with third
+       parties, or used for advertising or analytics. Access can be revoked at any time by deleting the local token file or at
+       <a href="https://myaccount.google.com/permissions">Google Account permissions</a>.</p>
+    <p class="en">The app's use of information received from Google APIs adheres to the
+       <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+       including the Limited Use requirements. It also uses YouTube API Services; see the
+       <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and the
+       <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+  </section>
+
+  <section>
+    <h2>문의 · Contact</h2>
+    <p><a href="mailto:byujin222@gmail.com">byujin222@gmail.com</a></p>
+  </section>
+
+  <footer>최종 수정 2026-11-24 · Last updated November 24, 2026</footer>
+</main>
+</body>
+</html>
